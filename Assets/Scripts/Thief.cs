@@ -1,32 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
+
+[RequireComponent (typeof(Animator))]
 
 public class Thief : MonoBehaviour
 {
     [SerializeField, Min(0.5f)] private float _movingSpeed;
 
     private Animator _animator;
-    private Quaternion _rotation;
 
-    void Start()
+    private void Start()
     {
         _animator = GetComponent<Animator>();
-        _rotation = transform.rotation;
     }
 
     public void Update()
     {
-        int rightMovingDegree = 0;
-        int leftMovigDegree = 180;
+        int leftDirectionDegree = 180;
+        int rightDirectionDegree = 0;
 
         if (Input.GetKey(KeyCode.RightArrow)) 
         {
-            Move(rightMovingDegree);
+            Move(rightDirectionDegree);
         }
         else if (Input.GetKey(KeyCode.LeftArrow))
         {
-            Move(leftMovigDegree);
+            Move(leftDirectionDegree);
         }
         else
         {
@@ -38,9 +37,8 @@ public class Thief : MonoBehaviour
     private void Move(int degree)
     {
         _animator.speed = 1;
-        _rotation.y = degree;
 
-        transform.rotation = _rotation;
+        transform.rotation = new Quaternion(0, degree, 0, 0);
         transform.Translate(_movingSpeed * Time.deltaTime, 0, 0);
     }
 }
