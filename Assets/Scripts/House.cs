@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    private AlarmSystem _alarmSystem;
+    private Signaling _alarmSystem;
 
     private void Start()
     {
-        _alarmSystem = GetComponentInChildren<AlarmSystem>();
+        _alarmSystem = GetComponentInChildren<Signaling>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

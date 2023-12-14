@@ -3,7 +3,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 
-public class AlarmSystem : MonoBehaviour
+public class Signaling : MonoBehaviour
 {
     [SerializeField, Range(0.01f, 2f)] private float _volumeChangingSpeed;
 

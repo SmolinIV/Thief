@@ -981,9 +981,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1061844607}
   - component: {fileID: 1061844609}
-  - component: {fileID: 1061844608}
+  - component: {fileID: 1061844610}
   m_Layer: 0
-  m_Name: Alarm System
+  m_Name: Signaling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1004,19 +1004,6 @@ Transform:
   m_Father: {fileID: 2023353206}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1061844608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061844606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a39895f7c0f81c34db2d5a0a91b913ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _volumeChangingSpeed: 0.874
 --- !u!82 &1061844609
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1113,6 +1100,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1061844610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061844606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6704814bac34b9f49b5131bcacde4899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _volumeChangingSpeed: 0.505
 --- !u!1 &1792771369
 GameObject:
   m_ObjectHideFlags: 0
